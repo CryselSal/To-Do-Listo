@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(./images/mountainous-gloomy-sky.jpg);
+    background-size: cover; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-width: 90%;
+    max-height: 100%;
+}

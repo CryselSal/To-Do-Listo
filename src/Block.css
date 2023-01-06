@@ -1,0 +1,27 @@
+.blockContainer{
+    background-color: #FAFBFD;
+    margin: 25px;
+    border-radius: 20px;
+    height: fit-content;
+    width: 270px;
+}
+
+@font-face {
+    font-family: 'Alef';
+    src: local('Alef'), url(./fonts/Alef/Alef-Regular.ttf) format('truetype');
+}
+
+.blockTitle{
+    font-family: Alef;
+    font-size: 30px;
+    font-weight: 200;
+    color: #2B7992;
+    margin: 25px;
+    opacity: 80%;
+}
+
+.blockAdd{
+    margin-left: 105px;
+    margin-top: -5px;
+    size: 10px;
+}

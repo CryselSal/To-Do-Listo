@@ -1,0 +1,10 @@
+.Contenedor{
+    display: flex;
+    justify-items: center;
+}
+.appContent{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

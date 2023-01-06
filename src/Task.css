@@ -1,0 +1,17 @@
+.taskContainer{
+    display: flex;
+    background-color: #E9EDF0;
+    border-radius: 20px;
+    margin: 15px;
+    cursor:move;
+}
+
+.taskText{
+    font-family: Alef;
+    opacity: 50%;
+    margin: 10px;
+}
+
+.taskComment{
+    margin-left: 10px;
+}
