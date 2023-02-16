@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './Header.js';
 import AppDD from './pruebaDD.js';
+import AppDragDrop from './Fusion.js';
+import AppDragDropDemo from './DragDropDEMO.js'
 import Block from './Block.js';
 import 'typeface-quicksand';
 import Task from './Task.js';
@@ -12,8 +14,7 @@ function App() {
     <div className="Contenedor">
     <div className="App">
     <div className='appContent'>
-    <AppDD tag="To Do"></AppDD>
-    <AppDD tag="Done"></AppDD>
+    <AppDragDropDemo/>
     </div>
     </div>
     </div>

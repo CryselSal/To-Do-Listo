@@ -38,42 +38,33 @@ const AppDD = (props) => {
   const dragItemBloque = useRef();
   const dragOverItemBloque = useRef();
   var varPrueba;
-  const dragStart = (position, bloque) => {
+
+  const dragStart = (e,position) => {
     dragItem.current = position;
-    dragItemBloque.current = bloque;
-    console.log(dragItemBloque.current);
   };
 
-  const dragEnter = (position, bloque) => {
+  const dragEnter = (e,position) => {
     dragOverItem.current = position;//1
-    dragOverItemBloque.current = bloque;
-    console.log(dragOverItemBloque.current);
   };
 
-  const drop = () => {
-    console.log(dragItemBloque.current)
-    if (dragItemBloque.current === 'Undefined') {
-      console.log(dragItemBloque.current);
-      console.log(dragOverItemBloque.current);
-      console.log("ustedes son diferentes")
-    }
-    else if (dragItemBloque.current === dragOverItemBloque.current) {
+  const drop = (e) => {
       
       var copyListItems = [...list];
+      console.log(copyListItems[dragItem.current]);
+      console.log(copyListItems[dragOverItem.current]);
       const dragItemContent = copyListItems[dragItem.current];//item 1
       copyListItems.splice(dragItem.current, 1);//elimino item 1
       copyListItems.splice(dragOverItem.current, 0, dragItemContent); //2 item 1 3 4 5 6
       console.log(copyListItems);
       setList(copyListItems);
-    }
   };
 
 
   return (
     <div className='blockContainer'>
       <h1 className='blockTitle'>{props.titleBlock}</h1>
-      {list.filter((item) => item.status == "To Do" && props.tag == "To Do" || item.status == "Done" && props.tag == "Done").map((item) => (
-        <div onDragStart={() => dragStart(item.id, item.status)} onDragEnter={() => dragEnter(item.id, item.status)} onDragEnd={drop}
+      {list && list.filter((item) => item.status == props.tag).map((item) => (
+        <div onDragStart={(e) => dragStart(e, item.id)} onDragEnter={(e) => dragEnter(e, item.id)} onDragEnd={drop}
           key={item.id} draggable>
           <Task titleTask={item.nameTask}></Task>
         </div>

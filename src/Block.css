@@ -1,9 +1,32 @@
 .blockContainer{
-    background-color: #FAFBFD;
+    display: flex;
+    flex: 1;
+    background-color: rgba(250, 251, 253, 0);
     margin: 25px;
     border-radius: 20px;
     height: fit-content;
+    width: fit-content;
+    justify-content:space-between;
+}
+
+.ToDo{
+    background-color: #FAFBFD;
+    border-radius: 20px;
+    padding: 10px;
     width: 270px;
+    height: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.Done{
+    background-color: #FAFBFD;
+    border-radius: 20px;
+    padding: 10px;
+    width: 270px;
+    height: fit-content;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 @font-face {
@@ -21,7 +44,7 @@
 }
 
 .blockAdd{
-    margin-left: 105px;
+    margin-left: 107px;
     margin-top: -5px;
     size: 10px;
 }
